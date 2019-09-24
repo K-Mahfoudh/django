@@ -4,9 +4,11 @@
 </head>
 <body>
     <div>
-        <h1>
-            <a href="/">This is just a blog</a>
-        </h1>
+      {% for post in posts %}
+           {{ post.published_date }}
+           {{post.title}}
+           {{post.text|linebreaksbr}}
+      {% endfor %}
     </div>
     <div>
         <p>Published in some date</p>
